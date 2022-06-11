@@ -17,5 +17,12 @@ pipeline {
         }
       }
     }
+
+    stage('package')
+      steps{
+        script {
+          sh 'echo "packaging"'
+        }
+      }
     }
 }
