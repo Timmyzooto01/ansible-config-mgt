@@ -25,5 +25,22 @@ pipeline {
         }
       }
     }
+
+    stage('Deploy') {
+      steps {
+        script {
+          sh 'echo "Deploy stage"'
+        }
+      }
+    }
+    
+      stage('Clean up') {
+      steps {
+        script {
+          sh 'echo "Clean up stage"'
+        }
+      }
+    }
+  
   }
 }
