@@ -21,9 +21,9 @@ pipeline {
     stage('package') {
       steps {
         script {
-          sh 'echo "packaging"'
+          sh 'echo "packaging stage"'
         }
       }
     }
-    }
+  }
 }
