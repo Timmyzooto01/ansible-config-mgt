@@ -18,11 +18,12 @@ pipeline {
       }
     }
 
-    stage('package')
-      steps{
+    stage('package') {
+      steps {
         script {
           sh 'echo "packaging"'
         }
       }
+    }
     }
 }
