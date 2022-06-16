@@ -52,3 +52,38 @@ Then after the configuration in jenkins for the Jfrog
 
 
 You clone https://github.com/darey-devops/php-todo.git todo-php to your project then create a jenkinsfile along side with it 
+
+
+
+#### Craeting anlother database and user 
+
+# Databases.
+mysql_databases:
+   - name: Homestead
+     collation: utf8_general_ci
+     encoding: utf8
+     replicate: 1
+
+# Users.
+mysql_users: 
+  - name: 'Homestead'
+    host: 172.31.21.41 (jenkins-ansible server)
+    password: secret
+    priv: '*.*:ALL,GRANT'
+
+
+ then 
+we launch our windows terminal and connevct to the database to be sure of the database we created to be there 
+
+so only my database was creating and decided to login the instance and create a user according to the project 
+Create database homestead;
+CREATE USER 'homestead'@'jenkins-server-ip' IDENTIFIED BY 'sePret^i';
+GRANT ALL PRIVILEGES ON * . * TO 'homestead'@'jenkins-servre -ip';
+
+
+to the next step 
+
+
+
+
+

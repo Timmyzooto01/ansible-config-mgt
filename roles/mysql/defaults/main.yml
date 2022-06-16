@@ -127,11 +127,12 @@ mysql_users:
     password: secret
     priv: '*.*:ALL,GRANT'
 
-# Users.
+
+
 mysql_users: 
-  - name: 'Homestead'
+  - name: homestead
     host: 172.31.21.41
-    password: secret
+    password: sePret^i
     priv: '*.*:ALL,GRANT'
 
 mysql_disable_log_bin: false
