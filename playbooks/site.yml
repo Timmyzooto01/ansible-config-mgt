@@ -21,6 +21,6 @@
 # - name: import Loadbalancers assignment
 #   import_playbook: ../static-assignments/lb.yml
 
-- name: import database file
-  import_playbook: ../static-assignments/artifactory.yml
+# - name: import database file
+#   import_playbook: ../static-assignments/artifactory.yml
  
