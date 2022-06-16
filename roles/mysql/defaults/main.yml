@@ -127,7 +127,7 @@ mysql_users:
     password: secret
     priv: '*.*:ALL,GRANT'
 
- Users.
+# Users.
 mysql_users: 
   - name: 'Homestead'
     host: 172.31.21.41
