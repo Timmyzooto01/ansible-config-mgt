@@ -50,10 +50,11 @@ Create repository -> Select Package Type -> Generic, enter Repository Key as PBL
 
 Then after the configuration in jenkins for the Jfrog 
 
+ first all fork then 
+You clone https://github.com/Timmyzooto01/php-todo.git todo-php to your project then create a jenkinsfile along side with it 
 
-You clone https://github.com/darey-devops/php-todo.git todo-php to your project then create a jenkinsfile along side with it 
-
-
+##### composer 
+https://www.how2shout.com/linux/how-to-install-composer-on-ubuntu-22-04-20-04-lts/
 
 #### Craeting anlother database and user 
 
@@ -80,8 +81,14 @@ Create database homestead;
 CREATE USER 'homestead'@'jenkins-server-ip' IDENTIFIED BY 'sePret^i';
 GRANT ALL PRIVILEGES ON * . * TO 'homestead'@'jenkins-servre -ip';
 
+To confirm 
+sudo mysql 
+show databases;
+select user, host from mysql.user;
+
 
 to the next step 
+
 
 
 
