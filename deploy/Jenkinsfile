@@ -12,7 +12,7 @@ pipeline {
 
 
     
-  stages {
+  
     stage('You') {
       steps {
         script {
@@ -20,5 +20,6 @@ pipeline {
         }
       }
     }
-    }
+    
+  }
 }
