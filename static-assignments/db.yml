@@ -1,4 +1,11 @@
+# - hosts: db
+#   roles:
+#      - mysql
+#   become: yes
+
+
 - hosts: db
+  become: yes
   roles:
-     - mysql
-  
+    - mysql
+     
