@@ -9,5 +9,16 @@ pipeline {
         }
       }
     }
+
+
+    
+  stages {
+    stage('You') {
+      steps {
+        script {
+          sh 'echo "You  Stage"'
+        }
+      }
+    }
     }
 }
