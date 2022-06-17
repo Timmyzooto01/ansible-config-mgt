@@ -85,7 +85,9 @@ Then after the configuration in jenkins for the Jfrog
 You clone https://github.com/Timmyzooto01/php-todo.git todo-php to your project then create a jenkinsfile along side with it 
 
 ##### composer 
-https://www.how2shout.com/linux/how-to-install-composer-on-ubuntu-22-04-20-04-lts/
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+
+sudo mv composer-setup.php /usr/bin/composer
 
 #### Craeting anlother database and user 
 
