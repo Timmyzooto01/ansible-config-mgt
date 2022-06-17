@@ -3,6 +3,21 @@ for ansible use
 timmy is fed up of akure
 remmy no dy use 
 
+
+
+
+##### Running Ansible Playbook fronm Jenkins
+Install ansible in Jenkins sudo apt install ansible and ansible plugin in Jenkins UI. We need to install some dependencies for ansible to work properly, since we have some ansible modules in the roles. This will allow ansible playbook to run properly.
+
+yum install python3 python3-pip wget unzip git -y
+python3 -m pip install --upgrade setuptools
+python3 -m pip install --upgrade pip
+python3 -m pip install PyMySQL
+python3 -m pip install mysql-connector-python
+python3 -m pip install psycopg2==2.7.5 --ignore-installed
+ansible-galaxy collection install community.mysql
+ansible-galaxy collection install community.postgresql
+
 # INSTALL AND CONFIGURE JENKINS SERVER
 Step 1 – Install Jenkins server
 Create an AWS EC2 server based on Ubuntu Server 20.04 LTS and name it "Jenkins"
