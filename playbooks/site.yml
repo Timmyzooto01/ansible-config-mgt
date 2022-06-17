@@ -23,4 +23,7 @@
 
 # - name: import database file
 #   import_playbook: ../static-assignments/artifactory.yml
+
+ - name: import deployment file
+   import_playbook: ../static-assignments/deployment.yml
  

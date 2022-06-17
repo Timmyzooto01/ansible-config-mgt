@@ -121,7 +121,25 @@ select user, host from mysql.user;
 
 
 to the next step 
+then install 
+sudo apt install mysql-client in your jenkins-server instnace 
+restart the mysql after 
+#
 
+
+
+We added 
+DB_CONNECTION=mysql
+DB_PORT=3306
+ to the .env.sample file 
+ input the database ip address to the file also 
+
+
+Then connect to your database from the jenkins 
+
+
+
+Bundle the application code for into an artifact (archived package) upload to Artifactory, but ensure you install zip sudo apt install zip -y. You can only deploy to artifactory, if a unit test has been done on it. Publish the result artifact into Artifactory.
 
 
 
