@@ -1,26 +1,30 @@
 ---
 # tasks file for roles
- - name: install httpd on the webserver
-   ansible.builtin.yum:
-      name: httpd
-      state: present
-
- - name: ensure httpd is started and enabled
-   ansible.builtin.service:
-     name: httpd
-     state: started 
-     enabled: yes
-      
-- name: install PHP
-   ansible.builtin.yum:
-    name:
-     - php 
-     - php-mysqlnd
-     - php-gd 
-     - php-curl
-     - unzip
-     - php-fpm
+- 
+  ansible.builtin.yum: 
+    name: httpd
     state: present
+  name: "install httpd on the webserver"
+- 
+  ansible.builtin.service: 
+    enabled: true
+    name: httpd
+    state: started
+  name: "ensure httpd is started and enabled"
+
+      
+- 
+  ansible.builtin.yum: 
+    name: 
+      - php
+      - php-mysqlnd
+      - php-gd
+      - php-curl
+      - unzip
+      - php-fpm
+    state: present
+  name: "install PHP"
+
 
 - name: ensure httpd is started and enabled
   ansible.builtin.service:
