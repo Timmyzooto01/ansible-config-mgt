@@ -53,12 +53,12 @@
     force: yes
     remote_src: yes
 
-- name: remove nginx default page
+- name: remove httpd default page
   ansible.builtin.file:
     path: /etc/httpd/conf.d/welcome.conf
     state: absent
 
-- name: restart nginx
+- name: restart httpd
   ansible.builtin.service:
-    name: nginx
+    name: httpd
     state: restarted
