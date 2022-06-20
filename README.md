@@ -85,7 +85,9 @@ Then after the configuration in jenkins for the Jfrog
 You clone https://github.com/Timmyzooto01/php-todo.git todo-php to your project then create a jenkinsfile along side with it 
 
 ##### composer 
-https://www.how2shout.com/linux/how-to-install-composer-on-ubuntu-22-04-20-04-lts/
+curl -sS https://getcomposer.org/installer -o composer-setup.php
+
+sudo mv composer-setup.php /usr/bin/composer
 
 #### Craeting anlother database and user 
 
@@ -119,8 +121,41 @@ select user, host from mysql.user;
 
 
 to the next step 
+then install 
+sudo apt install mysql-client in your jenkins-server instnace 
+restart the mysql after 
+#
 
 
+
+We added 
+DB_CONNECTION=mysql
+DB_PORT=3306
+ to the .env.sample file 
+ input the database ip address to the file also 
+
+
+Then connect to your database from the jenkins 
+
+
+
+Bundle the application code for into an artifact (archived package) upload to Artifactory, but ensure you install zip sudo apt install zip -y. You can only deploy to artifactory, if a unit test has been done on it. Publish the result artifact into Artifactory.
+
+
+update the necessary things on the task from the artifactory 
+
+
+then check your todo ip-address to confirm your deployment as well too 
+
+
+Configure SonarQube
+Software Quality - The degree to which a software component, system or process meets specified requirements based on user needs and expectations.
+
+Software Quality Gates - Quality gates are basically acceptance criteria which are usually presented as a set of predefined quality criteria that a software development project must meet in order to proceed from one stage of its lifecycle to the next one.
+
+ansible-galaxy install lrk.sonarqube
+cd roles/
+mv lrk.sonarqube sonarqube
 
 
 

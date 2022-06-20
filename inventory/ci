@@ -5,7 +5,8 @@
 
 
 [sonarqube]
+172.31.31.161 ansible_ssh_user='ubuntu'
 
 
 [artifactory]
-172.31.17.44 ansible_ssh_user='ec2-user'
+172.31.19.165 ansible_ssh_user='ec2-user'
