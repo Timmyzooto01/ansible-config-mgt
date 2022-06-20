@@ -1,6 +1,4 @@
 --- 
-- 
-  become: true
-  hosts: sonarqube
+- hosts: sonarqube
   roles: 
-    - sonarqube
+   - /home/ubuntu/ansible-config-mgt/roles/sonar

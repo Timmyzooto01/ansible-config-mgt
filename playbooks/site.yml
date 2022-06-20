@@ -29,6 +29,6 @@
 
 
 - name: import sonarqube file
-  import_playbook: ../static-assignments/sonarqube.yml
+  import_playbook: /home/ubuntu/ansible-config-mgt/static-assignments/sonarqube.yml
  
  
