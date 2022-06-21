@@ -1,53 +1,48 @@
-pipeline {
-    agent any
+pipeline{
+   agent any
 
-  stages {
-    stage('Build') {
-      steps {
-        script {
-          sh 'echo "Building Stage"'
+   environment {
+      ANSIBLE_CONFIG="${WORKSPACE}/deploy/ansible.cfg"
+    }
+
+     parameters {
+      string(name: 'inventory_file', defaultValue: 'dev',  description: 'selecting the environment')
+          }
+     
+
+   stages{
+
+      stage("Initial cleanup") {
+          steps {
+            dir("${WORKSPACE}") {
+              deleteDir()
+            }
+          }
+        }
+
+      stage('Checkout SCM') {
+         steps{
+            git branch: 'feature/jenkinspipeline-stages', url: 'https://github.com/Timmyzooto01/ansible-config-mgt.git'
+         }
+       }
+      stage('Prepare Ansible For Execution') {
+        steps {
+          sh 'echo ${WORKSPACE}'  
+          sh 'sed -i "3 a roles_path=${WORKSPACE}/roles" ${WORKSPACE}/deploy/ansible.cfg'          
+        }
+     }
+
+
+      stage('Run Ansible') {
+        steps {
+            ansiblePlaybook become: true, colorized: true, credentialsId: 'private-key', disableHostKeyChecking: true, installation: 'ansible', inventory: 'inventory/${inventory}', playbook: 'playbooks/site.yml'
         }
       }
-    }
 
-    stage('Test') {
-      steps {
-        script {
-          sh 'echo "Testing Stage"'
+      stage('Clean Workspace after build'){
+        steps{
+          cleanWs()
         }
       }
-    }
-
-    stage('Package') {
-      steps {
-        script {
-          sh 'echo "packing Stage"'
-        }
-      }
-    }
-
-    stage('Deploy') {
-      steps {
-        script {
-          sh 'echo "Deploying Stage"'
-        }
-      }
-    }
-
-
-    stage('Clean up') {
-      steps {
-        script {
-          sh 'echo "Cleaning  Stage"'
-        }
-      }
-    }
-
-
-
-
-
-
-
-    }
-}
+   }
+}  
