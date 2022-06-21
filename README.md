@@ -5,6 +5,8 @@ remmy no dy use
 
 HI
 
+we are on project 14
+
 # INSTALL AND CONFIGURE JENKINS SERVER
 
 Step 1 – Install Jenkins server
