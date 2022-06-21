@@ -1,11 +1,11 @@
 ---
 - hosts: db
 - name: database assignment
-  ansible.builtin.import_playbook: ../static-assignments/db.yml
+  import_playbook: ../static-assignments/db.yml
 
 - hosts: nginx
 - name: nginx assignment
-  ansible.builtin.import_playbook: ../static-assignments/uat-webserver.yml
+  import_playbook: ../static-assignments/uat-webservers.yml
 
 # - hosts: artifactory
 # - name: artifactory assignment
