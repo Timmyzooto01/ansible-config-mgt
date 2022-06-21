@@ -159,4 +159,21 @@ mv lrk.sonarqube sonarqube
 
 
 
+###----- sonarqude property 
+
+
+i added this to the properties 
+
+## Flex Specific Properties
+
+# retrieve code coverage data from the Cobertura report
+sonar.flex.cobertura.reportPath=coverage-report/coverage-cobertua-flex.xml
+
+
+
+# PL/I Specific Properties
+sonar.pli.marginLeft=2
+sonar.pli.marginRight=0
+
+
 
