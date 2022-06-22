@@ -7,5 +7,5 @@
 - hosts: db
   become: yes
   roles:
-    - mysql
+    - /home/ubuntu/ansible-config-mgt/roles/mysql
      

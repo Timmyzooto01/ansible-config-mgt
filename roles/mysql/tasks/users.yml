@@ -12,14 +12,14 @@
   no_log: true
   
 
-- name: Ensure MySQL users are present.
-  mysql_user:
-    name: "homestead2"
-    host: 172.31.28.162
-    password: sePret^i
-    priv: "*.*:ALL,GRANT"
-    state: present
-    append_privs: "{{ item.append_privs | default('no') }}"
-    encrypted: "{{ item.encrypted | default('no') }}"
-  with_items: "{{ mysql_users }}"
-  no_log: true
+# - name: Ensure MySQL users are present.
+#   mysql_user:
+#     name: "homestead2"
+#     host: 172.31.28.162
+#     password: sePret^i
+#     priv: "*.*:ALL,GRANT"
+#     state: present
+#     append_privs: "{{ item.append_privs | default('no') }}"
+#     encrypted: "{{ item.encrypted | default('no') }}"
+#   with_items: "{{ mysql_users }}"
+#   no_log: true

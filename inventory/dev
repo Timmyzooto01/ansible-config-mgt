@@ -5,8 +5,8 @@
 <Todo-Web-Server-Private-IP-Address>
 
 [nginx]
-<Nginx-Private-IP-Address>
+172.31.82.133 ansible_ssh_user='ec2-user' 
 
 
 [db]
-<DB-Server-Private-IP-Address>
+172.31.88.154  ansible_ssh_user='ubuntu' 
