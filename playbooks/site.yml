@@ -1,9 +1,9 @@
 ---
-- hosts: db
+- hosts: All
+
 - name: database assignment
   import_playbook: ../static-assignments/db.yml
 
-- hosts: nginx
 - name: nginx assignment
   import_playbook: ../static-assignments/uat-webservers.yml
 
